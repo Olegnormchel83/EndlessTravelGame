@@ -17,4 +17,9 @@ void UET_BaseAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCal
 	{
 		SetStamina(FMath::Clamp(GetStamina(), 0, GetMaxStamina()));
 	}
+
+	if (Data.EvaluatedData.Attribute == GetManaAttribute())
+	{
+		SetMana(FMath::Clamp(GetMana(), 0, GetMaxMana()));
+	}
 }

@@ -29,7 +29,16 @@ public:
 	FGameplayAttributeData MaxHealth;
 	ATTRIBUTE_ACCESSORS(UET_BaseAttributeSet, MaxHealth)
 
-	//Health
+	//Mana
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
+	FGameplayAttributeData Mana;
+	ATTRIBUTE_ACCESSORS(UET_BaseAttributeSet, Mana)
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
+	FGameplayAttributeData MaxMana;
+	ATTRIBUTE_ACCESSORS(UET_BaseAttributeSet, MaxMana)
+
+	//Stamina
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
 	FGameplayAttributeData Stamina;
 	ATTRIBUTE_ACCESSORS(UET_BaseAttributeSet, Stamina)
