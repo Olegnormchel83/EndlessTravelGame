@@ -22,4 +22,14 @@ void UET_BaseAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCal
 	{
 		SetMana(FMath::Clamp(GetMana(), 0, GetMaxMana()));
 	}
+
+	if (Data.EvaluatedData.Attribute == GetStealthDurationAttribute())
+	{
+		SetStealthDuration(GetStealthDuration());
+	}
+
+	if (Data.EvaluatedData.Attribute == GetStealthPowerAttribute())
+	{
+		SetStealthPower(GetStealthPower());
+	}
 }
