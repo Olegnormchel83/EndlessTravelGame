@@ -64,6 +64,8 @@ public:
 	FGameplayAttributeData StealthPower;
 	ATTRIBUTE_ACCESSORS(UET_BaseAttributeSet, StealthPower)
 
-	//Functions
-	virtual void PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data) override;
+		//Functions
+		virtual void PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data) override;
+
+		//virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
 };
