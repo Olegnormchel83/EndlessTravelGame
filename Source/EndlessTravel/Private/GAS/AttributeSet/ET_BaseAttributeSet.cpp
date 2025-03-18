@@ -94,6 +94,25 @@ void UET_BaseAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCal
 	{
 		SetCurrentPatronsCount(FMath::Clamp(GetCurrentPatronsCount(), 0.f, GetMaxPatronsCount()));
 	}
+
+	//Level
+	if (Data.EvaluatedData.Attribute == GetLevelAttribute())
+	{
+		UE_LOG(LogAttributeSet, Warning, TEXT("InLevel: %.0f"), GetLevel());
+		SetLevel(GetLevel());
+	}
+
+	//CurrentExperience
+	if (Data.EvaluatedData.Attribute == GetCurrentExperienceAttribute())
+	{
+		SetCurrentExperience(GetCurrentExperience());
+	}
+
+	//ExperienceToNextLevel
+	if (Data.EvaluatedData.Attribute == GetExperienceToNextlevelAttribute())
+	{
+		SetExperienceToNextlevel(GetExperienceToNextlevel());
+	}
 }
 
 /*

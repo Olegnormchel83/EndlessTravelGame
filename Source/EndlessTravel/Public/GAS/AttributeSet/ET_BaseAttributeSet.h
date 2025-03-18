@@ -105,6 +105,23 @@ public:
 	FGameplayAttributeData MaxPatronsCount;
 	ATTRIBUTE_ACCESSORS(UET_BaseAttributeSet, MaxPatronsCount)
 
+	//Leveling
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes|Leveling|Level")
+	FGameplayAttributeData Level;
+	ATTRIBUTE_ACCESSORS(UET_BaseAttributeSet, Level)
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes|Leveling|Level")
+	FGameplayAttributeData MaxLevel;
+	ATTRIBUTE_ACCESSORS(UET_BaseAttributeSet, MaxLevel)
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes|Leveling|EXP")
+	FGameplayAttributeData CurrentExperience;
+	ATTRIBUTE_ACCESSORS(UET_BaseAttributeSet, CurrentExperience)
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes|Leveling|EXP")
+	FGameplayAttributeData ExperienceToNextlevel;
+	ATTRIBUTE_ACCESSORS(UET_BaseAttributeSet, ExperienceToNextlevel)
+
 	//Functions
 		virtual void PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data) override;
 
